@@ -11,7 +11,6 @@ case class Book(title: String, author:String)
 case class ExtendedBook(title:String, author:String, copies:Long)
 
 class DomainCounter (args: Args) extends Job(args) {
-  /*
     val library1 = TypedPipe.from(Seq(
     Book("To Kill a Mockingbird", "Harper Lee"),
   Book("The Fountainhead", "Ayn Rand"),
@@ -33,11 +32,11 @@ class DomainCounter (args: Args) extends Job(args) {
         .size
         .filter{ case (host, cnt) => cnt > 5 }
         .write(TypedCsv(args("output")))
-        */
+
   }
 
 object DomainCounter {
-  /*
+
     def main(args: Array[String]): Unit = {
           val progargs = List(
           "-Dmapred.",
@@ -47,5 +46,4 @@ object DomainCounter {
           "--local").toArray
        Tool.main(progargs)
     }
-    *
 }
